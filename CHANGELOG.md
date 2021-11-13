@@ -8,3 +8,8 @@
 
 - Create Dockerfiles for frontend and backend
 - Create docker-compose.yml
+
+# 0.3.0
+
+- Initialised Pipeline  
+- Added docker image to pipeline so that universal url works
