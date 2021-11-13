@@ -1,6 +1,6 @@
 {
   "name": "express-api-starter",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": " A basic starter for an express.js API",
   "main": "index.js",
   "scripts": {
