@@ -1,22 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>To-do List</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Add a task or mark completed tasks as done.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <form>
+          <h2>
+            <label htmlFor="input-new-todo" className="label">
+              Add a to-do:
+            </label>
+          </h2>
+          <input
+              type="text"
+              id="input-new-todo"
+              className="input"
+              name="text"
+              autoComplete="off"
+          />
+          <button type="submit" className="button-submit">
+              Add
+          </button>
+        </form>
+
+        <h2 id="current-tasks-heading">Current Tasks</h2>
+        <ul
+          role="list"
+          className="todo-list"
         >
-          Learn React
-        </a>
+          <li className="todo">
+            <div>
+              <input id="todo-0" type="checkbox" defaultChecked={true}/>
+              <label className="todo-label" htmlFor="todo-0">
+                Task 0
+              </label>
+            </div>
+            <div>
+              <button type="button" className="button">
+                Edit <span className="visually-hidden">Task 0</span>
+              </button>
+              <button type="button" className="button">
+                Delete <span className="visually-hidden">Task 0</span>
+              </button>
+            </div>
+          </li>
+        </ul>
       </header>
     </div>
   );
