@@ -5,7 +5,7 @@ export default function Form() {
         <form>
             <h2>
                 <label htmlFor="input-new-todo" className="label">
-                    Add a to-do:
+                    Add a task:
                 </label>
             </h2>
             <input
@@ -16,7 +16,7 @@ export default function Form() {
                 autoComplete="off"
             />
             <button type="submit" className="button-submit">
-                Add
+                Add task
             </button>
         </form>
     );

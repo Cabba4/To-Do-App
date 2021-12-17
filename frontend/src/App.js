@@ -18,7 +18,7 @@ function App(props) {
       <header className="App-header">
         <h1>To-do List</h1>
         <p>
-          Add a task or mark completed tasks as done.
+          View, add and edit tasks or mark completed tasks as done.
         </p>
         <Form />
         <h2 id="current-tasks-heading">Current Tasks</h2>
