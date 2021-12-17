@@ -32,8 +32,9 @@ function App(props) {
           role="list"
           className="todo-list"
         >
-          <Todo />
-          <Todo />
+          <Todo name="Task 0" completed={true} id="todo-0"/>
+          <Todo name="Task 1" completed={false} id="todo-1"/>
+          <Todo name="Task 2" completed={false} id="todo-2"/>
         </ul>
       </header>
     </div>
