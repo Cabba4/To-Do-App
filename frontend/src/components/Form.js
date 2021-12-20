@@ -4,10 +4,19 @@ export default function Form(props) {
     // For name state, set initial state to empty string, create setName function to update name state
     const [name, setName] = useState('');
 
+    // Event listener to handle change in input field when user types task
+    function handleInputChange(e) {
+        // Update name state to match typed text (value) from input field (target)
+        setName(e.target.value);
+    }
+
     // Handle submitting form data from user
     function handleFormSubmit(e) {
         e.preventDefault();
-        props.addNewTask("Going to add new task!"); // debugging
+        if (name !== "") {
+            props.addNewTask(name);
+        }
+        setName(""); // Clear input after submission
     }
 
     return (
@@ -24,6 +33,7 @@ export default function Form(props) {
                 name="text"
                 autoComplete="off"
                 value={name}
+                onChange={handleInputChange}
             />
             <button type="submit" className="button-submit">
                 Add task
