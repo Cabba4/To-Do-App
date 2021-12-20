@@ -4,7 +4,7 @@ variables:
   WEBAPP_IMAGE: ${CI_REGISTRY_IMAGE}/frontend
 
 stages:
-  - test
+#  - test
   - build
   - deploy
 
