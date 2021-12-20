@@ -3,6 +3,11 @@ import Todo from "./components/Todo";
 import Form from "./components/Form";
 
 function App(props) {
+    // Add new task to Todo list array
+    function addTaskToArray(name) {
+        alert(name);
+    }
+
   // Get tasks from array and turn into Todo component objects with id, name and completed
   const todoTasks = props.tasks?.map(task => (
       <Todo
@@ -13,6 +18,7 @@ function App(props) {
       />
       )
   );
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +26,7 @@ function App(props) {
         <p>
           View, add and edit tasks or mark completed tasks as done.
         </p>
-        <Form />
+        <Form addNewTask={addTaskToArray} />
         <h2 id="current-tasks-heading">Current Tasks</h2>
         <ul
           role="list"
