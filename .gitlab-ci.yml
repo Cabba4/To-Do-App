@@ -4,25 +4,25 @@ variables:
   WEBAPP_IMAGE: ${CI_REGISTRY_IMAGE}/frontend
 
 stages:
-  - test
+#  - test
   - build
   - deploy
 
-test:
-  image: node:latest
-  stage: test
-  script:
+#test:
+#  image: node:latest
+#  stage: test
+#  script:
     # Go to api directory
-    - cd backend
+#    - cd backend
     # Run npm commands
-    - npm install && npm test ##&& npm audit
+#    - npm install && npm test ##&& npm audit
     # Go to webapp directory
-    - cd ../frontend
+#    - cd ../frontend
     # Remove package-lock.json because of a bug
     # (https://stackoverflow.com/questions/63321707/react-npm-install-fails)
-    - rm package-lock.json
+#    - rm package-lock.json
     # Run npm commands
-    - npm install && npm test ##&& npm audit
+#    - npm install && npm test ##&& npm audit
 
 build:
   image: docker:latest
