@@ -10,7 +10,11 @@ export default function Todo(props) {
                     defaultChecked={props.completed}
                     onChange={() => props.toggleTaskCompleted(props.id)}
                 />
-                <label className="todo-label" htmlFor={props.id}>
+                <label
+                    className="todo-label"
+                    htmlFor={props.id}
+                    style={{textDecoration: props.completed ? 'line-through' : 'none'}}
+                >
                     {props.name}
                 </label>
             </div>
