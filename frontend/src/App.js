@@ -1,15 +1,21 @@
+import React, {useState} from "react";
 import './App.css';
 import Todo from "./components/Todo";
 import Form from "./components/Form";
+import { nanoid } from "nanoid";
 
 function App(props) {
+    // Store and update tasks in state
+    const [tasks, setTasks] = useState(props.tasks);
+
     // Add new task to Todo list array
     function addTaskToArray(name) {
-        alert(name);
+        const newTask = {id: "todo-" + nanoid(), name: name, completed: false};
+        setTasks([...tasks, newTask]);
     }
 
   // Get tasks from array and turn into Todo component objects with id, name and completed
-  const todoTasks = props.tasks?.map(task => (
+  const tasksArray = tasks.map(task => (
       <Todo
           id={task.id}
           name={task.name}
@@ -32,7 +38,7 @@ function App(props) {
           role="list"
           className="todo-list"
         >
-          {todoTasks}
+          {tasksArray}
         </ul>
       </header>
     </div>
