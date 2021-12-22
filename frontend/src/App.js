@@ -27,6 +27,12 @@ function App(props) {
         setTasks(updatedTasks);
     }
 
+    // Remove task from tasks array when user deletes the task
+    function removeTaskFromArray(id) {
+        const updatedTasksArray = tasks.filter(task => id !== task.id);
+        setTasks(updatedTasksArray);
+    }
+
     // Get tasks from array and turn into Todo component objects with id, name and completed
     const tasksArray = tasks.map(task => (
             <Todo
@@ -35,6 +41,7 @@ function App(props) {
                 completed={task.completed}
                 key={task.id}
                 toggleTaskCompleted={toggleTaskAsCompleted}
+                deleteTask={removeTaskFromArray}
             />
         )
     );

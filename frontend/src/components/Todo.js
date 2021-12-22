@@ -18,8 +18,12 @@ export default function Todo(props) {
                 <button type="button" className="button">
                     Edit <span className="visually-hidden">Task 0</span>
                 </button>
-                <button type="button" className="button">
-                    Delete <span className="visually-hidden">Task 0</span>
+                <button
+                    type="button"
+                    className="button"
+                    onClick={() => props.deleteTask(props.id)}
+                >
+                    Delete <span className="visually-hidden">{props.name}</span>
                 </button>
             </div>
         </li>
