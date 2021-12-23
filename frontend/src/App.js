@@ -51,9 +51,10 @@ function App(props) {
             <header className="App-header">
                 <h1>To-do List</h1>
                 <p>
-                    View, add and edit tasks or mark completed tasks as done.
+                    View and add tasks or mark completed tasks as done.
                 </p>
                 <Form addNewTask={addTaskToArray}/>
+                <hr/>
                 <h2 id="current-tasks-heading">Current Tasks</h2>
                 <ul
                     role="list"

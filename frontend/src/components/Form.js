@@ -21,11 +21,6 @@ export default function Form(props) {
 
     return (
         <form onSubmit={handleFormSubmit}>
-            <h2>
-                <label htmlFor="input-new-todo" className="label">
-                    Add a task:
-                </label>
-            </h2>
             <input
                 type="text"
                 id="input-new-todo"

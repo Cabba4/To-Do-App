@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const TODO_TASKS = [
-    {id: "todo-0", name:"Task 0", completed: true},
-    {id: "todo-1", name:"Task 1", completed: false},
-    {id: "todo-2", name:"Task 2", completed: false},
+    {id: "todo-0", name:"Go to the grocery store", completed: false},
+    {id: "todo-1", name:"Read a book", completed: false},
+    {id: "todo-2", name:"Bake a birthday cake", completed: false},
 ];
 
 ReactDOM.render(
