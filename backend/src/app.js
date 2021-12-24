@@ -16,9 +16,10 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-var work = task(10);
+
 
 app.get('/', (req, res) => {
+  var work = task(10);
   res.json({
     message: work
   });
