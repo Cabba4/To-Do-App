@@ -1,13 +1,14 @@
 const express = require('express');
 var task = require('fake-todos')
 
-var work = task(1);
+//var work = task(1);
 
 const router = express.Router();
 
 
 router.get('/', (req, res) => {
-  res.json({
+var work = task(1);  
+res.json({
     message: work
   });
 });
