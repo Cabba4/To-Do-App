@@ -13,3 +13,8 @@
 
 - Initialised Pipeline  
 - Added docker image to pipeline so that universal url works
+
+# 0.4.0  
+
+- Frontend has area for tasks  
+- Made backend endpoints which can give 10,5 or 1 random task
