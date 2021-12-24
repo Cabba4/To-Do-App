@@ -7,9 +7,10 @@ const random = require('./random');
 const router = express.Router();
 
 const task = require('fake-todos');
-var work = task(5);
+
 
 router.get('/', (req, res) => {
+  var work = task(5);
   res.json({
     message: work
   });
