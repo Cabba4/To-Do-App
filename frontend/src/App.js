@@ -4,11 +4,12 @@ import Todo from "./components/Todo";
 import Form from "./components/Form";
 import {nanoid} from "nanoid";
 
+//const apiEndpoint = "http://21wsp8pw.course.tamk.cloud/api/v1/tasks/random";
 const apiEndpoint = "http://localhost:5050/api/v1/tasks/random";
 
 function App(props) {
     // Store and update tasks in state
-    const [tasks, setTasks] = useState(props.tasks);
+    const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
@@ -74,12 +75,7 @@ function App(props) {
                 <Form addNewTask={addTaskToArray}/>
                 <hr/>
                 <h2 id="current-tasks-heading">Current Tasks</h2>
-                <ul
-                    role="list"
-                    className="todo-list"
-                >
                     {tasksArray}
-                </ul>
             </header>
         </div>
     );
