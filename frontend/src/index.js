@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {logDOM} from "@testing-library/react";
 
 //const apiEndpoint = "http://21wsp8pw.course.tamk.cloud/api/v1/tasks/random";
 const apiEndpoint = "http://localhost:5050/api/v1/tasks/random";
@@ -22,8 +21,7 @@ async function fetchEndpointPromise(endpoint) {
 function fetchTodoPromise(endpoint) {
     return Promise.resolve(fetchEndpointPromise(endpoint).then(data => {
         let todoObject = data.message[0];
-        let firstProperty = todoObject[Object.keys(todoObject)[0]];
-        return firstProperty;
+        return todoObject[Object.keys(todoObject)[0]];
     }));
 }
 

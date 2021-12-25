@@ -16,7 +16,7 @@ function App(props) {
 
     // Set task as complete or incomplete when checkbox is checked/unchecked
     function toggleTaskAsCompleted(id) {
-        const updatedTasks = tasks.map( task => {
+        const updatedTasks = tasks.map(task => {
             // Check if id of edited task is the same as this task
             if (id === task.id) {
                 // Return new task object with opposite completed state
