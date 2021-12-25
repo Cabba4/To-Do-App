@@ -7,7 +7,7 @@ import {nanoid} from "nanoid";
 //const apiEndpoint = "http://21wsp8pw.course.tamk.cloud/api/v1/tasks/random";
 const apiEndpoint = "http://localhost:5050/api/v1/tasks/random";
 
-function App(props) {
+function App() {
     // Store and update tasks in state
     const [tasks, setTasks] = useState([]);
 
