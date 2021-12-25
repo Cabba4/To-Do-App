@@ -1,12 +1,30 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './App.css';
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 import {nanoid} from "nanoid";
 
+const apiEndpoint = "http://localhost:5050/api/v1/tasks/random";
+
 function App(props) {
     // Store and update tasks in state
     const [tasks, setTasks] = useState(props.tasks);
+
+    useEffect(() => {
+        async function fetchData() {
+            let newTasks = []
+            for (let i = 0; i < 3; i++) {
+                const result = await fetch(apiEndpoint);
+                const data = await result.json();
+                let name = data.message[0].what;
+                const newTask = {id: "todo-" + nanoid(), name: name, completed: false};
+                newTasks.push(newTask)
+            }
+            setTasks([...tasks, ...newTasks]);
+        }
+
+        fetchData();
+    }, []);
 
     // Add new task to Todo list array
     function addTaskToArray(name) {

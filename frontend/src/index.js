@@ -7,11 +7,7 @@ import reportWebVitals from './reportWebVitals';
 //const apiEndpoint = "http://21wsp8pw.course.tamk.cloud/api/v1/tasks/random";
 const apiEndpoint = "http://localhost:5050/api/v1/tasks/random";
 
-let todoTasks = [
-    {id: "todo-0", name: "Go to the grocery store", completed: false},
-    {id: "todo-1", name: "Read a book", completed: false},
-    {id: "todo-2", name: "Bake a birthday cake", completed: false},
-];
+let todoTasks = [];
 
 async function fetchEndpointPromise(endpoint) {
     const result = await fetch(endpoint);
@@ -35,7 +31,7 @@ function updateTodoTasks() {
     console.log("Updated todoTasks to: ", todoTasks)
 }
 
-updateTodoTasks();
+// updateTodoTasks();
 
 ReactDOM.render(
     <React.StrictMode>
