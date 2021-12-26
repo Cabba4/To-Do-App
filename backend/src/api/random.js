@@ -9,7 +9,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
 var work = task(1);  
 res.json({
-    message: work
+    message: work,
+    message2: "test"
   });
 });
 
