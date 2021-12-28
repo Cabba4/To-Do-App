@@ -5,4 +5,4 @@ RUN cd /opt/app \
 	&& npm install --prod \
 	&& npm run build
 WORKDIR /opt/app
-CMD ["npx","server","-s","build"]
+CMD ["npx","serve","-s","build"]
