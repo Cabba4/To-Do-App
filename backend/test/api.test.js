@@ -12,12 +12,12 @@ describe('GET /api/v1', () => {
   });
 });
 
-describe('GET /api/v1/emojis', () => {
+describe('GET /api/v1/info', () => {
   it('responds with a json message', (done) => {
     request(app)
-      .get('/api/v1/emojis')
+      .get('/api/v1/info')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, ['😀', '😳', '🙄'], done);
+      .expect(200, '{"message":"This project was completed by Anmol Arora and Elina Widdowson"}', done);
   });
 });
