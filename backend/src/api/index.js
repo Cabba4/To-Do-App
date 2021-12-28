@@ -1,6 +1,6 @@
 const express = require('express');
 
-const emojis = require('./emojis');
+const info = require('./info');
 
 const random = require('./random');
 
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
   });
 });
 
-router.use('/emojis', emojis);
-router.use('/tasks/random', random);
+router.use('/info', info);
+router.use('/task/random', random);
 
 module.exports = router;
